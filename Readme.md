@@ -1,9 +1,10 @@
-# Node.js Style Guide
+# Node.js代码风格指南
 
 This is a guide for writing consistent and aesthetically pleasing node.js code.
 It is inspired by what is popular within the community, and flavored with some
 personal opinions.
 
+项目中有个.jshintrc文件用来在jshint中检查代码是否符合这些规则。
 There is a .jshintrc which enforces these rules as closely as possible. You can
 either use that and adjust it, or use
 [this script](https://gist.github.com/kentcdodds/11293570) to make your own.
@@ -15,24 +16,24 @@ according to your preferences.
 
 ![Creative Commons License](http://i.creativecommons.org/l/by-sa/3.0/88x31.png)
 
-## Table of contents
+## 目录
 
-### Formatting
-* [2 Spaces for indentation](#2-spaces-for-indentation)
-* [Newlines](#newlines)
-* [No trailing whitespace](#no-trailing-whitespace)
-* [Use Semicolons](#use-semicolons)
-* [80 characters per line](#80-characters-per-line)
-* [Use single quotes](#use-single-quotes)
-* [Opening braces go on the same line](#opening-braces-go-on-the-same-line)
-* [Declare one variable per var statement](#declare-one-variable-per-var-statement)
+### 格式 Formatting
+* [缩进采用2个空格](#2-spaces-for-indentation)
+* [换行](#newlines)
+* [行末不能有空格](#no-trailing-whitespace)
+* [使用;号](#use-semicolons)
+* [每行最多80个字符](#80-characters-per-line)
+* [使用’单引号](#use-single-quotes)
+* [开头大括号{在同一行内](#opening-braces-go-on-the-same-line)
+* [一个var只对应声明一个变量](#declare-one-variable-per-var-statement)
 
-### Naming Conventions
+### 命名规范 Naming Conventions
 * [Use lowerCamelCase for variables, properties and function names](#use-lowercamelcase-for-variables-properties-and-function-names)
 * [Use UpperCamelCase for class names](#use-uppercamelcase-for-class-names)
 * [Use UPPERCASE for Constants](#use-uppercase-for-constants)
 
-### Variables
+### 变量 Variables
 * [Object / Array creation](#object--array-creation)
 
 ### Conditionals
@@ -567,3 +568,5 @@ if (a.empty()) {
   console.log('losing');
 }
 ```
+
+
