@@ -20,13 +20,13 @@ according to your preferences.
 
 ### 格式 Formatting
 * [缩进采用2个空格](#缩进采用2个空格)
-* [换行](#newlines)
-* [行末不能有空格](#no-trailing-whitespace)
-* [语句结尾不要故意漏掉;分号](#use-semicolons)
-* [每行最多80个字符](#80-characters-per-line)
-* [使用’单引号](#use-single-quotes)
-* [开头大括号{在同一行内](#opening-braces-go-on-the-same-line)
-* [一个var只对应声明一个变量](#declare-one-variable-per-var-statement)
+* [换行](#换行)
+* [行末不能有空格](#行末不能有空格)
+* [语句结尾不要故意漏掉分号](#语句结尾不要故意漏掉分号)
+* [每行最多80个字符](#每行最多80个字符)
+* [使用单引号](#使用单引号)
+* [开头大括号在同一行内](#开头大括号在同一行内)
+* [一个var只对应声明一个变量](#一个var只对应声明一个变量)
 
 ### 命名规范 Naming Conventions
 * [变量、属性和函数名使用小写开头的驼峰命名法](#use-lowercamelcase-for-variables-properties-and-function-names)
@@ -66,12 +66,12 @@ according to your preferences.
 Use 2 spaces for indenting your code and swear an oath to never mix tabs and
 spaces - a special kind of hell is awaiting you otherwise.
 
-### Newlines
+### 换行
 
 Use UNIX-style newlines (`\n`), and a newline character as the last character
 of a file. Windows-style newlines (`\r\n`) are forbidden inside any repository.
 
-### No trailing whitespace
+### 行末不能有空格
 
 Just like you brush your teeth after every meal, you clean up any trailing
 whitespace in your JS files before committing. Otherwise the rotten smell of
