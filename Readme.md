@@ -19,7 +19,7 @@ according to your preferences.
 ## 目录
 
 ### 格式 Formatting
-* [缩进采用2个空格](#2-spaces-for-indentation)
+* [缩进采用2个空格](#缩进采用2个空格)
 * [换行](#newlines)
 * [行末不能有空格](#no-trailing-whitespace)
 * [语句结尾不要故意漏掉;分号](#use-semicolons)
@@ -61,7 +61,7 @@ according to your preferences.
 
 你可以用 [editorconfig.org](http://editorconfig.org/) 来设置你的编辑器的代码风格. 使用 [Node.js Style Guide .editorconfig file](.editorconfig)来自动检查风格符合下面的缩进、换行、空格规范。
 
-### 2 Spaces for indentation
+### 缩进采用2个空格
 
 Use 2 spaces for indenting your code and swear an oath to never mix tabs and
 spaces - a special kind of hell is awaiting you otherwise.
