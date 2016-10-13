@@ -398,9 +398,9 @@ req.on('end', function() {
 
 ### No nested closures
 
-Use closures, but don't nest them. Otherwise your code will become a mess.
+写代码的时候不要把闭包（匿名回调函数）嵌套在一起，否则你的代码会很难看。
 
-*Right:*
+*正确:*
 
 ```js
 setTimeout(function() {
@@ -412,7 +412,7 @@ function afterConnect() {
 }
 ```
 
-*Wrong:*
+*错误:*
 
 ```js
 setTimeout(function() {
@@ -425,9 +425,7 @@ setTimeout(function() {
 
 ### Method chaining
 
-One method per line should be used if you want to chain methods.
-
-You should also indent these methods so it's easier to tell they are part of the same chain.
+链式调用方法的时候一行只写一个方法，并且.开头要缩进表示这是链式调用当中。
 
 *Right:*
 
@@ -438,7 +436,7 @@ User
   .exec(function(err, user) {
     return true;
   });
-````
+```
 
 *Wrong:*
 
@@ -465,15 +463,13 @@ User.findOne({ name: 'foo' }).populate('bar')
   .exec(function(err, user) {
     return true;
   });
-````
+```
 
 ## Comments
 
 ### Use slashes for comments
 
-Use slashes for both single line and multi line comments. Try to write
-comments that explain higher level mechanisms or clarify difficult
-segments of your code. Don't use comments to restate trivial things.
+单行和多行的注释里都用//来表示（IDE有注释快捷键）。注释应该用来说明不那么浅显的设计或者原理，不要过度注释那些直接能看懂的代码。
 
 *Right:*
 
@@ -497,10 +493,10 @@ if (isSessionValid) {
 *Wrong:*
 
 ```js
-// Execute a regex
+// 执行正则表达式
 var matches = item.match(/ID_([^\n]+)=([^\n]+)/);
 
-// Usage: loadUser(5, function() { ... })
+// 使用方法: loadUser(5, function() { ... })
 function loadUser(id, cb) {
   // ...
 }
@@ -517,28 +513,25 @@ if (isSessionValid) {
 
 ### Object.freeze, Object.preventExtensions, Object.seal, with, eval
 
-Crazy shit that you will probably never need. Stay away from it.
+不要用上面这些疯狂的东西，基本上你都用不到，只会让你的代码更看不懂。
 
 ### Requires At Top
 
-Always put requires at top of file to clearly illustrate a file's dependencies. Besides giving an overview for others at a quick glance of dependencies and possible memory impact, it allows one to determine if they need a package.json file should they choose to use the file elsewhere.
+require要放在文件开头，这样才能清晰的表明文件的依赖关系。Besides giving an overview for others at a quick glance of dependencies and possible memory impact, it allows one to determine if they need a package.json file should they choose to use the file elsewhere.
 
 ### Getters and setters
 
-Do not use setters, they cause more problems for people who try to use your
-software than they can solve.
+尽量不要使用setter（在赋值的时候自定义修改内部属性），这会给用你代码的人带来更多问题。（object应该尽量是immutable，避免修改内部属性这种[副作用side effect][sideeffect]）
 
-Feel free to use getters that are free from [side effects][sideeffect], like
-providing a length property for a collection class.
+没有[副作用side effects][sideeffect]的getter可以用, 比如给一个自定义的集合类Collection设置一个length属性来计算集合大小。
 
 [sideeffect]: http://en.wikipedia.org/wiki/Side_effect_(computer_science)
 
 ### Do not extend built-in prototypes
 
-Do not extend the prototype of native JavaScript objects. Your future self will
-be forever grateful.
+不要为了装逼扩展原生的js对象的prototype。未来的你自己会感激你的。
 
-*Right:*
+*正确:*
 
 ```js
 var a = [];
@@ -547,7 +540,7 @@ if (!a.length) {
 }
 ```
 
-*Wrong:*
+*错误:*
 
 ```js
 Array.prototype.empty = function() {
