@@ -63,8 +63,7 @@ according to your preferences.
 
 ### 缩进采用2个空格
 
-Use 2 spaces for indenting your code and swear an oath to never mix tabs and
-spaces - a special kind of hell is awaiting you otherwise.
+使用2个空格来进行缩进，对天发誓你不会把空格按成tab。否则你代码会出现很奇葩的bug。
 
 ### 换行
 
@@ -73,27 +72,22 @@ of a file. Windows-style newlines (`\r\n`) are forbidden inside any repository.
 
 ### 行末不能有空格
 
-Just like you brush your teeth after every meal, you clean up any trailing
-whitespace in your JS files before committing. Otherwise the rotten smell of
-careless neglect will eventually drive away contributors and/or co-workers.
+行末不能带有空格，否则你代码很难看而且会出错。webstorm之类的IDE和jshint/eslint之类的代码静态检查都会提示。
 
-### Use Semicolons
+### 语句结尾不要故意漏掉分号
 
-According to [scientific research][hnsemicolons], the usage of semicolons is
-a core value of our community. Consider the points of [the opposition][], but
-be a traditionalist when it comes to abusing error correction mechanisms for
-cheap syntactic pleasures.
+根据 [hackernews上的问卷调查][hnsemicolons], 使用分号是JS社区的原则。 可以了解考虑 [反面观点][the opposition]，但在追求简单的语法快感和过度依赖错误检查机制这两者的权衡上还是应该保守一些。
 
 [the opposition]: http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding
 [hnsemicolons]: http://news.ycombinator.com/item?id=1547647
 
-### 80 characters per line
+### 每行最多80个字符
 
 Limit your lines to 80 characters. Yes, screens have gotten much bigger over the
 last few years, but your brain has not. Use the additional room for split screen,
 your editor supports that, right?
 
-### Use single quotes
+### 使用单引号
 
 Use single quotes, unless you are writing JSON.
 
@@ -109,7 +103,7 @@ var foo = 'bar';
 var foo = "bar";
 ```
 
-### Opening braces go on the same line
+### 开头大括号在同一行内
 
 Your opening braces go on the same line as the statement.
 
@@ -132,7 +126,7 @@ if (true)
 
 Also, notice the use of whitespace before and after the condition statement.
 
-### Declare one variable per var statement
+### 一个var只对应声明一个变量
 
 Declare one variable per var statement, it makes it easier to re-order the
 lines. However, ignore [Crockford][crockfordconvention] when it comes to
