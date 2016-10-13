@@ -325,9 +325,7 @@ if (password.length >= 4 && /^(?=.*\d).{4,}$/.test(password)) {
 
 ### Write small functions
 
-Keep your functions short. A good function fits on a slide that the people in
-the last row of a big room can comfortably read. So don't count on them having
-perfect vision and limit yourself to ~15 lines of code per function.
+保持你的代码简短。好的函数应该能放在一页PPT上以便在一个大房间做代码评审时最后一排的人能舒服的阅读。一般单个函数不要超过20行。
 
 ### Return early from functions
 
