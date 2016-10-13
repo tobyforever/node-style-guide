@@ -22,44 +22,44 @@ according to your preferences.
 * [缩进采用2个空格](#2-spaces-for-indentation)
 * [换行](#newlines)
 * [行末不能有空格](#no-trailing-whitespace)
-* [使用;号](#use-semicolons)
+* [语句结尾不要故意漏掉;分号](#use-semicolons)
 * [每行最多80个字符](#80-characters-per-line)
 * [使用’单引号](#use-single-quotes)
 * [开头大括号{在同一行内](#opening-braces-go-on-the-same-line)
 * [一个var只对应声明一个变量](#declare-one-variable-per-var-statement)
 
 ### 命名规范 Naming Conventions
-* [Use lowerCamelCase for variables, properties and function names](#use-lowercamelcase-for-variables-properties-and-function-names)
-* [Use UpperCamelCase for class names](#use-uppercamelcase-for-class-names)
-* [Use UPPERCASE for Constants](#use-uppercase-for-constants)
+* [变量、属性和函数名使用小写开头的驼峰命名法](#use-lowercamelcase-for-variables-properties-and-function-names)
+* [类名使用大写开头的驼峰命名法](#use-uppercamelcase-for-class-names)
+* [常量使用大写](#use-uppercase-for-constants)
 
 ### 变量 Variables
-* [Object / Array creation](#object--array-creation)
+* [创建对象和数组的写法](#object--array-creation)
 
-### Conditionals
-* [Use the === operator](#use-the--operator)
-* [Use multi-line ternary operator](#use-multi-line-ternary-operator)
-* [Use descriptive conditions](#use-descriptive-conditions)
+### 条件判断 Conditionals
+* [使用 === 操作符](#use-the--operator)
+* [使用多行的三元操作符](#use-multi-line-ternary-operator)
+* [使用描述命名的条件表达式](#use-descriptive-conditions)
 
-### Functions
-* [Write small functions](#write-small-functions)
-* [Return early from functions](#return-early-from-functions)
-* [Name your closures](#name-your-closures)
-* [No nested closures](#no-nested-closures)
-* [Method chaining](#method-chaining)
+### 函数 Functions
+* [函数应该保持简短](#write-small-functions)
+* [在函数中尽早返回](#return-early-from-functions)
+* [对闭包命名](#name-your-closures)
+* [不要有嵌套的闭包](#no-nested-closures)
+* [方法链式调用](#method-chaining)
 
-### Comments
-* [Use slashes for comments](#use-slashes-for-comments)
+### 注释 Comments
+* [使用//表示备注](#use-slashes-for-comments)
 
-### Miscellaneous
+### 其他 Miscellaneous
 * [Object.freeze, Object.preventExtensions, Object.seal, with, eval](#objectfreeze-objectpreventextensions-objectseal-with-eval)
-* [Requires At Top](#requires-at-top)
-* [Getters and setters](#getters-and-setters)
-* [Do not extend built-in prototypes](#do-not-extend-built-in-prototypes)
+* [Require放在顶部](#requires-at-top)
+* [Getter和setter](#getters-and-setters)
+* [不要扩展原生的prototypes](#do-not-extend-built-in-prototypes)
 
-## Formatting
+## 格式 Formatting
 
-You may want to use [editorconfig.org](http://editorconfig.org/) to enforce the formatting settings in your editor. Use the [Node.js Style Guide .editorconfig file](.editorconfig) to have indentation, newslines and whitespace behavior automatically set to the rules set up below.
+你可以用 [editorconfig.org](http://editorconfig.org/) 来设置你的编辑器的代码风格. 使用 [Node.js Style Guide .editorconfig file](.editorconfig)来自动检查风格符合下面的缩进、换行、空格规范。
 
 ### 2 Spaces for indentation
 
