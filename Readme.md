@@ -231,10 +231,9 @@ File.fullPermissions = 0777;
 
 ### Object / Array creation
 
-Use trailing commas and put *short* declarations on a single line. Only quote
-keys when your interpreter complains:
+object的每一行key-value后面都带上逗号。如果对象很简单，书写时就不要换行。key不要带引号，除非key中间有空格:
 
-*Right:*
+*正确:*
 
 ```js
 var a = ['hello', 'world'];
@@ -244,7 +243,7 @@ var b = {
 };
 ```
 
-*Wrong:*
+*错误:*
 
 ```js
 var a = [
@@ -259,10 +258,9 @@ var b = {"good": 'code'
 
 ### Use the === operator
 
-Programming is not about remembering [stupid rules][comparisonoperators]. Use
-the triple equality operator as it will work just as expected.
+[相等性的判断规则][comparisonoperators]容易造成歧义. 使用===来判断对象相等，这样才靠谱.
 
-*Right:*
+*正确:*
 
 ```js
 var a = 0;
@@ -272,7 +270,7 @@ if (a !== '') {
 
 ```
 
-*Wrong:*
+*错误:*
 
 ```js
 var a = 0;
@@ -285,9 +283,9 @@ if (a == '') {
 
 ### Use multi-line ternary operator
 
-The ternary operator should not be used on a single line. Split it up into multiple lines instead.
+三元表达式不应该写在同一行。条件复杂的情况下应该写成多行。
 
-*Right:*
+*推荐:*
 
 ```js
 var foo = (a === b)
@@ -295,7 +293,7 @@ var foo = (a === b)
   : 2;
 ```
 
-*Wrong:*
+*简单情况下:*
 
 ```js
 var foo = (a === b) ? 1 : 2;
@@ -380,10 +378,9 @@ function isPercentage(val) {
 
 ### Name your closures
 
-Feel free to give your closures a name. It shows that you care about them, and
-will produce better stack traces, heap and cpu profiles.
+匿名回调函数（闭包）可以改成有名字的函数。这样在调试查看函数调用堆栈、profile内存堆栈和CPU的时候都会更直观。
 
-*Right:*
+*正确:*
 
 ```js
 req.on('end', function onEnd() {
@@ -391,7 +388,7 @@ req.on('end', function onEnd() {
 });
 ```
 
-*Wrong:*
+*错误:*
 
 ```js
 req.on('end', function() {
